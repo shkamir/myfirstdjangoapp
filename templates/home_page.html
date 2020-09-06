@@ -1,0 +1,41 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-info">
+                {{ content }}
+            <hr>
+            <img src="{% static "images/back.jpg" %}" alt="static images" width="200">
+            </p>
+        </div>
+    </div>
+    {% if request.user.is_authenticated %}
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    this is logged in content
+                </h3>
+                <p class="text-info">
+                    {{ new_content }}
+                </p>
+            </div>
+        </div>
+
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+        <a class="btn btn-success" href="/admin">
+            admin section
+        </a>
+    {% endif %}
+</div>
+{% endblock %}
+{% block header_styles %}
+        <link rel="stylesheet" href="{% static "css/main.css" %}"/>
+    
+{% endblock %}

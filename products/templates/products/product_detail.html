@@ -1,0 +1,20 @@
+{% extends 'Base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="{{ object.image.url }}" alt="{{ object.title }}">
+                <div class="caption">
+                    <h5>{{ object.timestamp | timesince }} ago</h5>
+                    <h5>{{ object.timestamp | time }} ago</h5>
+                    <h3>{{ object.title }}</h3>
+                    <p>{{ object.description | truncatewords:7 }}</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default"
+                                                                                       role="button">Button</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

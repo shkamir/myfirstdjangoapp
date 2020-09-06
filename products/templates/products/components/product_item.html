@@ -1,0 +1,16 @@
+<div class="thumbnail">
+        <a href="/products/{{ product.slug }}">
+            <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        </a>
+        <div class="caption">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.description }}</p>
+            <p>
+                <a href="{{ product.get_absolute_url }}" class="btn btn-primary btn-block" role="button">show
+                    product</a>
+                                <a href="{% url 'productDetail' slug=product.slug %}" class="btn btn-primary btn-block" role="button">show
+                    product</a>
+            </p>
+        </div>
+    </div>
+</div>

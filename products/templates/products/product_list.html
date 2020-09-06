@@ -1,0 +1,13 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for product in object_list %}
+                <div class="col-md-6" style="border: 1px solid {% cycle 'red' 'blue' 'purple' %}; margin-bottom: 10px">
+                {% include "products/components/product_item.html" with product=product %}
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>{% endblock %}

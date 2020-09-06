@@ -1,5 +1,5 @@
 # myfirstdjangoapp
-##finished learning basics of django with this simple project
+# Finished learning basics of django with this simple project
 
 
 
